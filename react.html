@@ -15,10 +15,10 @@
   
     </div>
   <script type="text/babel">
-    var { Router, Route, IndexRoute, IndexLink, Link } = ReactRouter;
-    var destination = document.querySelector("#container");
+    const { Router, Route, IndexRoute, IndexLink, Link } = ReactRouter;
+    const destination = document.querySelector("#container");
 
-    var Home = React.createClass({
+    const Home = React.createClass({
       render: function() {
         return (
           <div>
@@ -30,7 +30,7 @@
   	  }
     });
 
-    var Contact = React.createClass({
+    const Contact = React.createClass({
   	  render: function() {
   		return (
   		  <div>
@@ -41,7 +41,7 @@
   	  }
   	});
 
-    var Stuff = React.createClass({
+    const Stuff = React.createClass({
   	  render: function() {
   		return (
    		  <div>
@@ -58,7 +58,7 @@
   	  }
   	});
 
-  	var App = React.createClass({
+  	const App = React.createClass({
   	  render: function() {
   		return (
   		  <div>
