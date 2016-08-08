@@ -59,6 +59,21 @@
   	});
   	{/*Let's talk about the semi colons*/}
 
+  	const LightningCounter = React.createClass({
+  	  getInitialState: function() {
+  	  return {
+  	  	strikes: 0
+  	  };
+  	  },
+  	  render: function(){
+  	  return (
+  	  	<div>
+	  	  <h1>{this.state.strikes} Lightning Strikes</h1>
+  	  	</div>
+  	  );
+  	  }
+  	});
+
   	const App = React.createClass({
   	  render: function() {
   		return (
@@ -67,7 +82,8 @@
   			<ul className="header">
   			  <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
   			  <li><Link to="/stuff" activeClassName="active">Turtles</Link></li>
-  			  <li><Link to="/contact" activeClassName="active">Contact</Link></li>
+  			  <li><Link to="/contact" activeClassName="active">Contact</Link></li> 
+  			  <li><Link to="/lightning" activeClassName="active">Lightning</Link></li>
   			</ul>
  			<div className="content">
   			  {this.props.children}
@@ -78,11 +94,13 @@
   	});
 
   ReactDOM.render(
+
   	<Router>
   	  <Route path="/" component={App}>
   	  	<IndexRoute component={Home}/>
   	  	<Route path="stuff" component={Stuff} />
   	  	<Route path="contact" component={Contact} />
+  	  	<Route path="lightning" component={LightningCounter} />
    	  </Route>
   	</Router>,
 
