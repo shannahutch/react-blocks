@@ -22,74 +22,74 @@
       render: function() {
         return (
           <div>
-  		  	<h2>Hello</h2>
-  			<p>The cat sat on the roof and the dog was smelly~</p>
-  			<p>Beer and pizza are an american combo</p>
-  		  </div>
-  		);
+	  		  	<h2>Hello</h2>
+		  			<p>The cat sat on the roof and the dog was smelly~</p>
+		  			<p>Beer and pizza are an american combo</p>
+	  		  </div>
+	  		);
   	  }
     });
 
     const Contact = React.createClass({
   	  render: function() {
-  		return (
-  		  <div>
-  			<h2>Got Questions?</h2>
-  			<p>Just post on our forms <a href="http://forum.kirupa.com">forum</a></p>
-  		  </div>
-  		);
+	  		return (
+	  		  <div>
+		  			<h2>Got Questions?</h2>
+		  			<p>Just post on our forms <a href="http://forum.kirupa.com">forum</a></p>
+	  		  </div>
+	  		);
   	  }
   	});
 
     const Stuff = React.createClass({
   	  render: function() {
-  		return (
-   		  <div>
-  			<h2>Turtles</h2>
- 			<ol>
-        	  <li>1 turtle</li>
-        	  <li>2 turtle</li>
-        	  <li>3 turtle</li>
-        	  <li>4 turtle</li>
-              <li>More turtle</li>
-        	</ol>
-  		  </div>
-  		);
+	  		return (
+	   		  <div>
+		  			<h2>Turtles</h2>
+		 				<ol>
+		        	  <li>1 turtle</li>
+		        	  <li>2 turtle</li>
+		        	  <li>3 turtle</li>
+		        	  <li>4 turtle</li>
+	              <li>More turtle</li>
+	        	</ol>
+	  		  </div>
+	  		);
   	  }
   	});
   	{/*Let's talk about the semi colons*/}
 
   	const LightningCounter = React.createClass({
   	  getInitialState: function() {
-  	  return {
-  	  	strikes: 0
-  	  };
+	  	  return {
+	  	  	strikes: 0
+	  	  };
   	  },
   	  render: function(){
-  	  return (
-  	  	<div>
-	  	  <h1>{this.state.strikes} Lightning Strikes</h1>
-  	  	</div>
-  	  );
+	  	  return (
+	  	  	<div>
+		  	  	<h1>{this.state.strikes} Lightning Strikes</h1>
+	  	  	</div>
+	  	  );
   	  }
   	});
 
   	const App = React.createClass({
   	  render: function() {
-  		return (
-  		  <div>
-  			<h1>SPA-React</h1>
-  			<ul className="header">
-  			  <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
-  			  <li><Link to="/stuff" activeClassName="active">Turtles</Link></li>
-  			  <li><Link to="/contact" activeClassName="active">Contact</Link></li> 
-  			  <li><Link to="/lightning" activeClassName="active">Lightning</Link></li>
-  			</ul>
- 			<div className="content">
-  			  {this.props.children}
-  			</div>
-  		  </div>
-  		)
+	  		return (
+	  		  <div>
+		  			<h1>SPA-React</h1>
+		  			<ul className="header">
+		  			  <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
+		  			  <li><Link to="/stuff" activeClassName="active">Turtles</Link></li>
+		  			  <li><Link to="/contact" activeClassName="active">Contact</Link></li> 
+		  			  <li><Link to="/lightning" activeClassName="active">Lightning</Link></li>
+		  			</ul>
+		 				<div className="content">
+		  			  {this.props.children}
+		  			</div>
+	  		  </div>
+	  		);
   	  }
   	});
 
