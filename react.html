@@ -67,13 +67,13 @@
   	  },
   	  timerTick: function() {
   	  	this.setState({
-  	  		strikes: this.state.strikes + 100
+  	  		strikes: this.state.strikes + 0
   	  	});
   	  },
   	  componentDidMount: function() {
   	  	setInterval(this.timerTick, 1000);
   	  },
-  	  render: function(){
+  	  render: function() {
 	  	  return (
 	  	  	<div>
 		  	  	<h1>{this.state.strikes}</h1>
@@ -81,6 +81,32 @@
 	  	  	</div>
 	  	  );
   	  }
+  	});
+
+  	const Counter = React.createClass({
+  		render: function() {
+  			return (
+  				<div>
+  					{this.props.display}
+  				</div>
+  			);
+  		}
+  	});
+
+  	const CounterParent = React.createClass({
+  		getInitialState: function() {
+  			return {
+  				count: 0
+  			};
+  		},
+  		render: function() {
+  			return (
+	  			<div>
+	  				<Counter display={this.state.count}/>
+	  				<button>+</button>
+	  			</div>
+	  		);
+	  	}
   	});
 
   	const App = React.createClass({
@@ -93,6 +119,7 @@
 		  			  <li><Link to="/stuff" activeClassName="active">Turtles</Link></li>
 		  			  <li><Link to="/contact" activeClassName="active">Contact</Link></li> 
 		  			  <li><Link to="/lightning" activeClassName="active">Lightning</Link></li>
+		  			  <li><Link to="/counter" activeClassName="active">Counter</Link></li>
 		  			</ul>
 		 				<div className="content">
 		  			  {this.props.children}
@@ -110,6 +137,7 @@
   	  	<Route path="stuff" component={Stuff} />
   	  	<Route path="contact" component={Contact} />
   	  	<Route path="lightning" component={LightningCounter} />
+  	  	<Route path="counter" component={CounterParent} />
    	  </Route>
   	</Router>,
 
