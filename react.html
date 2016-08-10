@@ -89,7 +89,7 @@
   	const Counter = React.createClass({
   		render: function() {
   			return (
-  				<div>
+  				<div className="counter">
   					{this.props.display}
   				</div>
   			);
@@ -104,9 +104,8 @@
   		},
   		render: function() {
   			return (
-	  			<div>
-	  				<Counter display={this.state.count}/>
-	  				<button>+</button>
+	  			<div className="counterparent">
+	  				<Counter display={this.state.count}/><button>+</button>
 	  			</div>
 	  		);
 	  	}
