@@ -69,6 +69,12 @@
   	  	this.setState({
   	  		strikes: this.state.strikes + 100
   	  	});
+        if (this.state.strikes==1000) {
+          clearInterval(this.interval);
+          this.setState({
+          strikes: this.state.strikes + 100
+        });
+        }
   	  },
   	  componentDidMount: function() {
   	  	this.interval = setInterval(this.timerTick, 1000);
