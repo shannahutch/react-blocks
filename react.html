@@ -70,10 +70,7 @@
   	  		strikes: this.state.strikes + 100
   	  	});
         if (this.state.strikes==1000) {
-          clearInterval(this.interval);
-          this.setState({
-          strikes: this.state.strikes + 100
-        });
+          (this.setState({strikes:0}));
         }
   	  },
   	  componentDidMount: function() {
