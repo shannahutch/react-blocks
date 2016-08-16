@@ -74,7 +74,7 @@
   	  	this.interval = setInterval(this.timerTick, 1000);
   	  },
   	  componentWillUnmount: function() {
-  	  	clearInterval(this.state.strikes == 1000);
+  	  	clearInterval(this.interval);
   	  },
   	  render: function() {
 	  	  return (
@@ -104,7 +104,7 @@
   		},
   		render: function() {
   			return (
-	  			<div className="counterparent">
+	  			<div className="counterparents">
 	  				<Counter display={this.state.count}/><button>+</button>
 	  			</div>
 	  		);
