@@ -105,10 +105,22 @@
   				count: 0
   			};
   		},
+      increase: function(e) {
+        var currentCount = this.state.count;
+        if (e.shiftKey) {
+          currentCount += 10;
+        } else {
+          currentCount += 1;
+        }
+        this.setState({
+          count: currentCount
+        });
+      },
   		render: function() {
   			return (
-	  			<div className="counterparents">
-	  				<Counter display={this.state.count}/><button>+</button>
+	  			<div className="counterparent">
+	  				<Counter display={this.state.count}/>
+            <button onClick={this.increase}>+</button>
 	  			</div>
 	  		);
 	  	}
